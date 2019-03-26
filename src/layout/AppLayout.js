@@ -1,11 +1,19 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 const AppLayout = ({ children }) => {
   return (
-    <div>
-      <h1>Socialed</h1>
-      <div>{children}</div>
-    </div>
+    <Fragment>
+      <header className="navbar navbar-light bg-light">
+        <div className="navbar-brand">Розклад</div>
+      </header>
+      <main>{children}</main>
+      <footer class="card-footer text-muted">
+        <div class="footer-copyright text-center py-3">
+          Designed and built with all the love in the world by the
+          <a href="http://t.me/fs1923"> Fs1923</a>
+        </div>
+      </footer>
+    </Fragment>
   );
 };
 
