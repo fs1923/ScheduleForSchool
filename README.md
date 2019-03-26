@@ -1,2 +1,0 @@
-# ScheduleForSchool
-Created with CodeSandbox
