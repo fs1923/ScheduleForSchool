@@ -4,7 +4,7 @@ const AppLayout = ({ children }) => {
   return (
     <Fragment>
       <header className="navbar navbar-light bg-light">
-        <div className="navbar-brand">Розклад</div>
+        <div className="navbar-brand">Розклад Чернихів ЗОШ</div>
       </header>
       <main>{children}</main>
       <footer className="card-footer text-muted">

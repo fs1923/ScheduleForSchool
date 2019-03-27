@@ -13,7 +13,27 @@ class Home extends Component {
     return (
       <div>
         {this.state.grade ? (
-          <Schedule grade={this.state.grade} />
+          <Fragment>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a
+                    onClick={() =>
+                      this.setState({
+                        grade: 0
+                      })
+                    }
+                  >
+                    Home
+                  </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  {this.state.grade} Клас
+                </li>
+              </ol>
+            </nav>
+            <Schedule grade={this.state.grade} />
+          </Fragment>
         ) : (
           <div className="container">
             <div className="btn-group-vertical">

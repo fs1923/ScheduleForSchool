@@ -8,8 +8,29 @@ class Schedule extends Component {
       schedule: CollectionSchedule[props.grade]
     };
   }
+  days = ["Понеділок", "Вівторок", "Середа", "Четвер", "Пятниця"];
   render() {
-    return <div>{this.state.schedule}</div>;
+    return (
+      <Fragment>
+        <table className="table table-bordered">
+          <tbody>
+            {this.days.map((day, grade) => (
+              <Fragment key={day}>
+                <tr className="table-secondary text-center">
+                  <td colSpan="2">{day}</td>
+                </tr>
+                {this.state.schedule[grade].map((lesson, number) => (
+                  <tr key={day * 10 + number}>
+                    <td scope="row">{number}</td>
+                    <td>{lesson}</td>
+                  </tr>
+                ))}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      </Fragment>
+    );
   }
 }
 export default Schedule;
